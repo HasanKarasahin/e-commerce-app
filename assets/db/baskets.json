@@ -1,0 +1,20 @@
+{
+  "195a04f4bf62309de31e87abda0ec097": {
+    "id": "195a04f4bf62309de31e87abda0ec097",
+    "productKey": "key2",
+    "userId": 1,
+    "count": 1
+  },
+  "9be5bfa9d581e4e0ea016b3be27d5d00": {
+    "id": "9be5bfa9d581e4e0ea016b3be27d5d00",
+    "productKey": "key3",
+    "userId": 1,
+    "count": 1
+  },
+  "81e50354d1d84ee81ca3894f20f8f4f7": {
+    "id": "81e50354d1d84ee81ca3894f20f8f4f7",
+    "productKey": "key2",
+    "userId": 1,
+    "count": 1
+  }
+}

@@ -1,0 +1,17 @@
+table > tbody > tr:hover {
+    opacity: 0.5;
+    background-color: rgb(255, 248, 220);
+    cursor: pointer;
+}
+
+.selected-tr {
+    background-color: rgb(255, 248, 207);
+}
+
+.cardCustom {
+    margin: 5px;
+}
+
+.customTable {
+    margin: 5px;
+}

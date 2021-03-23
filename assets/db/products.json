@@ -1,0 +1,74 @@
+{
+  "key1": {
+    "id": "key1",
+    "productCode": "K001",
+    "productName": "Kaktüs",
+    "productDescription": "Kaktüs1",
+    "price": "15₺",
+    "pricetypeId": "1",
+    "imageName": "kaktus_1"
+  },
+  "key2": {
+    "id": "key2",
+    "productCode": "K002",
+    "productName": "Kaktüs",
+    "productDescription": "Kaktüs1",
+    "price": "20₺",
+    "pricetypeId": "1",
+    "imageName": "kaktus_2"
+  },
+  "key3": {
+    "id": "key3",
+    "productCode": "K003",
+    "productName": "Kaktüs",
+    "productDescription": "Kaktüs1",
+    "price": "30₺",
+    "pricetypeId": "1",
+    "imageName": "beton_saksı_1"
+  },
+  "key4": {
+    "id": "key4",
+    "productCode": "BS001",
+    "productName": "Beton Saksı",
+    "productDescription": "Kaktüs1",
+    "price": "15₺",
+    "pricetypeId": "1",
+    "imageName": "beton_saksı_2"
+  },
+  "key5": {
+    "id": "key5",
+    "productCode": "BS002",
+    "productName": "Beton Saksı",
+    "productDescription": "Kaktüs1",
+    "price": "15₺",
+    "pricetypeId": "1",
+    "imageName": "beton_saksı_3"
+  },
+  "key6": {
+    "id": "key6",
+    "productCode": "ST001",
+    "productName": "Sepet Teraryum",
+    "productDescription": "Kaktüs1",
+    "price": "150₺",
+    "pricetypeId": "1",
+    "imageName": "sepet_teraryum_1"
+  },
+  "key7": {
+    "id": "key7",
+    "productCode": "ST002",
+    "productName": "Sepet Teraryum",
+    "productDescription": "Kaktüs1",
+    "price": "160₺",
+    "pricetypeId": "1",
+    "imageName": "sepet_teraryum_2"
+  },
+  "key8": {
+    "id": "key8",
+    "productCode": "ST003",
+    "productName": "Sepet Teraryum",
+    "productDescription": "Kaktüs1",
+    "price": "160₺",
+    "pricetypeId": "1",
+    "imageName": "sepet_teraryum_2"
+  }
+}
