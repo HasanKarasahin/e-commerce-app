@@ -1,18 +1,17 @@
-# PHP OOP Sepet Ödevi
+# PHP OOP Sepet
 
 PHP ile object oriented programlama pratiği amacıyla aşağıda kurallara göre belirtilen ödev yapılacaktır. 
 
 
-- Ödev son teslim tarihi 3 Mart 23:00
-- Bir yere ( heroku vb ) deploy edilmiş olması artı puan :)
+- Bir yere ( heroku vb ) deploy edilmiş olacak
 
 ## Gereksinimler
 - Arayüz için bootstrap kullanılacak.
-- Proje native php kullanılarak yazılmalı, herhangi hazır bir framework yada kütüphane kullanılmamalı
-- Object oriented programlama yaklaşımı ile yapılmalı
+- Proje native php kullanılarak yazılacak.
+- Object oriented programlama yaklaşımı ile yapılacak.
 - Namespace kullanımına dikkat edilmeli.
 - Autoloader yapısı kurulmalı. ( composer tercih edilebilir )
-- Exception'ları handle etmek artı puan :)
+- Exception'ları handle edilecek.
 
 
 ## Uygulama Özellikleri
