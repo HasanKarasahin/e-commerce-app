@@ -1,8 +1,11 @@
 <?php
 
 //$requestUri = $_SERVER['REQUEST_URI'];
-$requestUri = strtok($_SERVER["REQUEST_URI"], '?');
-$requestUri= explode("/",$requestUri)[1];
+$dirname = $_SERVER["SCRIPT_NAME"];
+$requestUri = str_replace($dirname,null,$_SERVER["REQUEST_URI"]);
+$requestUri = strtok($requestUri, '?');
+print_r($requestUri);
+exit;
 
 $routeMap = array(
     "/" => "Home",
