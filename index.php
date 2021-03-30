@@ -1,11 +1,17 @@
 <?php
 
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
+
 //$requestUri = $_SERVER['REQUEST_URI'];
 $dirname = $_SERVER["SCRIPT_NAME"];
-$requestUri = str_replace($dirname,null,$_SERVER["REQUEST_URI"]);
+$requestUri = str_replace(['e-commerce-app/','.php'],null,$dirname);
+
 $requestUri = strtok($requestUri, '?');
-print_r($requestUri);
-exit;
+
+if(isset($_GET['_page_'])) $requestUri = "/".$_GET['_page_'];
 
 $routeMap = array(
     "/" => "Home",
@@ -66,6 +72,7 @@ spl_autoload_register(function ($class_name) {
 });
 
 echo \Views\View::getTemplateFromFile('_header');
+
 
 $result = array_key_exists($requestUri, $routeMap);
 
