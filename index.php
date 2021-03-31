@@ -18,8 +18,8 @@ $routeMap = array(
     "/index" => "Home",
     "/home" => "Home",
     "/anasayfa" => "Home",
-    "/sepetim" => "basket",
-    "/mybasket" => "basket",
+    "/sepetim" => "Basket",
+    "/mybasket" => "Basket",
 );
 
 
