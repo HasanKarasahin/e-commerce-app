@@ -7,11 +7,11 @@ error_reporting(E_ALL);
 
 //$requestUri = $_SERVER['REQUEST_URI'];
 $dirname = $_SERVER["SCRIPT_NAME"];
-$requestUri = str_replace(['e-commerce-app/','.php'],null,$dirname);
+$requestUri = str_replace(['e-commerce-app/', '.php'], null, $dirname);
 
 $requestUri = strtok($requestUri, '?');
 
-if(isset($_GET['_page_'])) $requestUri = "/".$_GET['_page_'];
+if (isset($_GET['_page_'])) $requestUri = "/" . $_GET['_page_'];
 
 $routeMap = array(
     "/" => "Home",
@@ -21,7 +21,6 @@ $routeMap = array(
     "/sepetim" => "Basket",
     "/mybasket" => "Basket",
 );
-
 
 spl_autoload_register(function ($class_name) {
 
@@ -39,10 +38,6 @@ spl_autoload_register(function ($class_name) {
 
         if ($namespace == 'Modeller') {
             $namespace = 'Model';
-            //$filePath = $namespace . DIRECTORY_SEPARATOR . $classsName . '.php';
-            //$filePath="Moddel/Product/Product.php";
-            //include_once('Model/Product/Product.php');
-            //echo $class_name."<br/>";
         }
 
         if ($classsName != null) {
@@ -59,9 +54,7 @@ spl_autoload_register(function ($class_name) {
         if (is_file($filePath)) {
             include_once $filePath;
         } else {
-
             echo "Hata var.";
-
         }
 
     } catch (Exception $e) {
