@@ -1,10 +1,6 @@
 <?php
 
-namespace Modeller;
-
-use Model\Model;
-
-class Basket extends Model
+class BasketModel extends Model
 {
     static function getBaskets()
     {
@@ -30,7 +26,7 @@ class Basket extends Model
 
     static function addBasket($newData)
     {
-        $currentData = \Modeller\Basket::getBaskets();
+        $currentData = BasketModel::getBaskets();
 
         //TODO aynı ürün olanları birleştirip gönder. Sadece adet bilgisini arttır.
 

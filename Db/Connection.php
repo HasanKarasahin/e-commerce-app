@@ -1,5 +1,4 @@
 <?php
-namespace db;
 class Connection
 {
     private $connection;
@@ -17,7 +16,6 @@ class Connection
         $this->dbport = $data['dbport'];
         $this->dbuser = $data['dbuser'];
         $this->dbpass = $data['dbpass'];
-        print_r($data);
         $this->connection = new \PDO('mysql:host=' . $this->dbhost . ';dbname=' . $this->dbname, $this->dbuser, $this->dbpass);
     }
 

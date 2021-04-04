@@ -1,7 +1,5 @@
 <?php
-namespace Templates;
-use Views\View;
-class Basket extends View {
+class BasketView extends AbstractView {
 
     public function getTemplate($data='Basket')
     {

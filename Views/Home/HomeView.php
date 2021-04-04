@@ -1,7 +1,5 @@
 <?php
-namespace Templates;
-use Views\View;
-class Home extends View {
+class HomeView extends AbstractView {
 
     public function getTemplate($data='Home')
     {

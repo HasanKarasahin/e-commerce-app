@@ -1,15 +1,17 @@
 <?php
 
-use Controller\Controller;
+include __DIR__.'/../Controller.php';
+include __DIR__.'/../../Views/Home/HomeView.php';
+include __DIR__.'/../../Model/Product/ProductModel.php';
+include __DIR__.'/../../Model/Basket/BasketModel.php';
 
-class Home extends Controller
+class HomeController extends Controller
 {
 
     function display()
     {
-        $data = \Modeller\Product::getProducts();
-        //shuffle($data);
-        $template = (new Templates\Home)->getTemplate();
+        $data = ProductModel::getProducts();
+        $template = (new HomeView)->getTemplate();
 
         $view = "";
 
@@ -39,7 +41,7 @@ class Home extends Controller
                 )
             );
 
-            \Modeller\Basket::addBasket($newData);
+            BasketModel::addBasket($newData);
         }
     }
 }

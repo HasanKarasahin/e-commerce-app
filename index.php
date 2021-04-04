@@ -4,8 +4,6 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
-
-//$requestUri = $_SERVER['REQUEST_URI'];
 $dirname = $_SERVER["SCRIPT_NAME"];
 $requestUri = str_replace(['e-commerce-app/', '.php'], null, $dirname);
 
@@ -22,6 +20,7 @@ $routeMap = array(
     "/mybasket" => "Basket",
 );
 
+/*
 spl_autoload_register(function ($class_name) {
 
     try {
@@ -62,18 +61,27 @@ spl_autoload_register(function ($class_name) {
         exit();
     }
 
-});
+});*/
 
-echo \Views\View::getTemplateFromFile('_header');
+include_once __DIR__.'/Views/AbstractView.php';
+include __DIR__."/Model/Model.php";
+//include_once __DIR__.'/Controller/Home/HomeController.php';
 
+
+
+echo AbstractView::getTemplateFromFile('_header');
 
 $result = array_key_exists($requestUri, $routeMap);
 
 if ($result) {
     $routeMapKey = $routeMap[$requestUri];
-    if (is_file('Controller' . DIRECTORY_SEPARATOR . $routeMapKey . DIRECTORY_SEPARATOR . $routeMapKey . '.php')) {
-        $obj = new $routeMap[$requestUri];
+    if (is_file('Controller' . DIRECTORY_SEPARATOR . $routeMapKey . DIRECTORY_SEPARATOR . $routeMapKey . 'Controller.php')) {
 
+        $className = $routeMap[$requestUri].'Controller';
+
+        include_once __DIR__.'/Controller/'.$routeMap[$requestUri].'/'.$className.'.php';
+
+        $obj = new $className;
 
         if (isset($_GET['a']) == 'action') {
             $obj->action($_GET['actionType'], $_GET['id']);
@@ -83,9 +91,9 @@ if ($result) {
         }
 
     } else {
-        echo \Views\View::getTemplateFromFile('_notfoundpage');
+        echo AbstractView::getTemplateFromFile('_notfoundpage');
     }
 } else {
-    echo \Views\View::getTemplateFromFile('_notfoundpage');
+    echo AbstractView::getTemplateFromFile('_notfoundpage');
 }
-echo \Views\View::getTemplateFromFile('_footer');
+echo AbstractView::getTemplateFromFile('_footer');

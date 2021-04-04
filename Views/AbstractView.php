@@ -1,14 +1,7 @@
 <?php
 
-namespace Views;
-
-abstract class View
+abstract class AbstractView
 {
-    function sayHello()
-    {
-        echo "Hello From View";
-    }
-
     static function getTemplateStatic($data)
     {
         return $data;
