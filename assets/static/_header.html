@@ -6,11 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Her yer Kaktüs 🌵</title>
-    <link rel="stylesheet" href="assets/css/boostrap5.0.0Beta.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
 
 
-    <script src="assets/js/jquery3.5.1.js"></script>
     <script>
 
     </script>
@@ -20,7 +19,7 @@
 <body class="p-3 mb-2">
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="/e-commerce-app/">HeryerKaktüs 🌵</a>
+    <a class="navbar-brand" href="/">HeryerKaktüs 🌵</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -29,14 +28,28 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-                <a class="nav-link" href="/e-commerce-app/">Anasayfa</a>
+                <a class="nav-link" href="/">Anasayfa</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="sepetim">Sepetim</a>
             </li>
-
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Ürünlerimiz
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Kaktüsler</a>
+                    <a class="dropdown-item" href="#">Saksılar</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Teraryumlar</a>
+                </div>
+            </li>
         </ul>
+        <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Ara</button>
+        </form>
     </div>
 </nav>
 
-<div class="row">
+<div class="row" style="margin: 10px 20px 20px 20px;padding:10px 20px 20px 20px">
