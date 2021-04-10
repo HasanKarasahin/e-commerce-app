@@ -17,7 +17,7 @@ class BasketController extends Controller
         $view = "";
 
         $template = (new BasketView)->getTemplate('Basket_Table_Content');
-        $i = 1;
+        $i = 1;/*
         foreach ($dataBaskets as $key => $item) {
             $totalCount = 2;
             $dataProduct = ProductModel::getProducts()->{$item->productKey};
@@ -26,7 +26,7 @@ class BasketController extends Controller
                 [$i, $dataProduct->productName,  $dataProduct->price, $totalCount, $totalCount * intval($dataProduct->price), $dataProduct->productCode],
                 $template);
             $i++;
-        }
+        }*/
         $templateHeader = (new BasketView)->getTemplate('Basket_Table_Header');
         $templateFooter = (new BasketView)->getTemplate('Basket_Table_Footer');
 
