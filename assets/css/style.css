@@ -15,3 +15,11 @@ table > tbody > tr:hover {
 .customTable {
     margin: 5px;
 }
+
+.logo {
+    margin-right: 25px;
+}
+
+.logo:hover {
+    cursor: pointer;
+}
