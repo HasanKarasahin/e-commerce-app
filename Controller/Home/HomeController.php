@@ -10,7 +10,13 @@ class HomeController extends Controller
 
     function display()
     {
-        $data = ProductModel::getProducts();
+
+        $category='';
+        if(isset($_GET["kategori"])){
+            $category = $_GET["kategori"];
+        }
+
+        $data = ProductModel::getProducts($category);
         $template = (new HomeView)->getTemplate();
 
         $view = "";

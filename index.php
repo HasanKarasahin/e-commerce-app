@@ -67,8 +67,6 @@ include_once __DIR__.'/Views/AbstractView.php';
 include __DIR__."/Model/Model.php";
 //include_once __DIR__.'/Controller/Home/HomeController.php';
 
-
-
 echo AbstractView::getTemplateFromFile('_header');
 
 $result = array_key_exists($requestUri, $routeMap);

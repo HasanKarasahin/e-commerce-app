@@ -1,3 +1,17 @@
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #888;
+}
+
 table > tbody > tr:hover {
     opacity: 0.5;
     background-color: rgb(255, 248, 220);

@@ -2,17 +2,18 @@
 include __DIR__."/../../Db/Connection.php";
 class ProductModel extends Model {
 
-    static function getProducts(){
-        return self::getProductsFromDb();
+    static function getProducts($category=''){
+        return self::getProductsFromDb($category);
     }
 
-    static function getProductsFromDb()
+    static function getProductsFromDb($category)
     {
         try {
             $dbh = Connection::getInstance()->getConnection();
 
-            $sql = " CALL `sp_GetProducts`();";
+            $sql = " CALL `sp_GetProducts`(:prmCategory);";
             $stmt = $dbh->prepare($sql);
+            $stmt->bindParam(':prmCategory', $category, PDO::PARAM_STR, 32);
             $stmt->execute();
 
             $arr = array();
