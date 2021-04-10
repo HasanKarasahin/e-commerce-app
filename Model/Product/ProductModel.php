@@ -2,39 +2,44 @@
 include __DIR__."/../../Db/Connection.php";
 class ProductModel extends Model {
 
-
     static function getProducts(){
-        self::getProductsFromDb();
-        return self::getDataFromDb('products');
+        return self::getProductsFromDb();
     }
-
 
     static function getProductsFromDb()
     {
         try {
             $dbh = Connection::getInstance()->getConnection();
 
-            $sql = "CALL `sp_GetTodos`();";
-            $arr = array();
+            $sql = " CALL `sp_GetProducts`();";
+            $stmt = $dbh->prepare($sql);
+            $stmt->execute();
 
-//            foreach ($dbh->query($sql) as $row) {
-//
-//                array_push($arr, array(
-//                    "id" => $row['id'],
-//                    "todo" => $row['todo'],
-//                    "createdDate" => $row['createdDate'],
-//                    "done" => $row['done'],
-//                    "endDate" => $row['endDate']
-//                ));
-//
-//            }
+            $arr = array();
+            $arrDb = $stmt->fetchAll();
+
+
+            if($arrDb != '') {
+                foreach ($arrDb as $row) {
+                    array_push($arr, array(
+                        "id" => $row['id'],
+                        "productName" => $row['productName'],
+                        "price" => $row['price'],
+                        "discounted" => $row['discounted'],
+                        "categoryName" => $row['categoryName'],
+                        "imagePath" => $row['imagePath']
+                    ));
+                }
+            }else{
+                return false;
+            }
             return $arr;
 
         } catch (PDOException $e) {
             print_r($e->getMessage());
             die("Error occurred:" . $e->getMessage());
         }
-        return null;
+        return false;
     }
 
 
