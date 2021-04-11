@@ -15,7 +15,6 @@
 
 
 ## Uygulama Özellikleri
-Yazılacak sepet uygulamasında aşağıdaki özellikler olmalı;
 - Ürünler anasayfada listelenmeli ve ürün adı, fiyat bilgisi, para birimi bilgisi, sepete ekle butonu gösterilmeli
 - Sepete ekle butonuna basıldığında ürün sepete eklenmeli.
 - Sepet içeriği SESSION içerisinde yer almalı
