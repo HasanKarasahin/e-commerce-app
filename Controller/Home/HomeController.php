@@ -23,8 +23,8 @@ class HomeController extends Controller
 
         foreach ($data as $key => $item) {
             $view .= str_replace(
-                ['{productName}', '{price}','{discounted}','{categoryName}', '{imagePath}', '{key}'],
-                [$item['productName'], $item['price'],$item['discounted'],$item['categoryName'], $item['imagePath'], $key],
+                ['{productName}', '{price}','{discounted}','{categoryName}', '{imagePath}', '{key}','{url}'],
+                [$item['productName'], $item['price'],$item['discounted'],$item['categoryName'], $item['imagePath'], $key,$item['nameUrl']],
                 $template);
         }
         return $view;

@@ -18,6 +18,7 @@ $routeMap = array(
     "/anasayfa" => "Home",
     "/sepetim" => "Basket",
     "/mybasket" => "Basket",
+    "/detay"=>"Details"
 );
 
 /*
