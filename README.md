@@ -1,9 +1,9 @@
-# PHP OOP Sepet
-
-PHP ile object oriented programlama pratiği amacıyla aşağıda kurallara göre belirtilen ödev yapılacaktır. 
+# Heryerkaktüs
 
 
-- Bir yere ( heroku vb ) deploy edilmiş olacak
+## Test Linki; http://test.heryerkaktus.com/
+
+
 
 ## Gereksinimler
 - Arayüz için bootstrap kullanılacak.
@@ -15,8 +15,6 @@ PHP ile object oriented programlama pratiği amacıyla aşağıda kurallara gör
 
 
 ## Uygulama Özellikleri
-Yazılacak sepet uygulamasında aşağıdaki özellikler olmalı;
-- Ürünler bir json dosyasında saklanmalı
 - Ürünler anasayfada listelenmeli ve ürün adı, fiyat bilgisi, para birimi bilgisi, sepete ekle butonu gösterilmeli
 - Sepete ekle butonuna basıldığında ürün sepete eklenmeli.
 - Sepet içeriği SESSION içerisinde yer almalı
@@ -24,5 +22,4 @@ Yazılacak sepet uygulamasında aşağıdaki özellikler olmalı;
 - Sepet içeriğinden istenilen ürün kaldırılabilmeli
 - Sepette kaç ürün olduğu header'da yer alacak sepet ikonu yanında rakamsal olarak gösterilmeli
 - Sepet listesinde ürün ismi, fiyatı, para birimi, kaç adet eklendiği yer almalı.
-- Arayüz yayına çıkabilir bir ürün seviyesinde olmalı.
 
